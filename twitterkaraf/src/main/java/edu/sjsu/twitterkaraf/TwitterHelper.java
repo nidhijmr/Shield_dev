@@ -24,7 +24,7 @@ import oauth.signpost.exception.OAuthMessageSignerException;
 /**
  * Helper Class to invoke all Twitter APIs Uses signpost to make http calls.
  * 
- * @author Anushri Srinath Aithal Nidhi Jamar Aswhwini Shankar Narayan Anuradha
+ * @author Anushri Srinath Aithal Nidhi Jamar Ashwini Shankar Narayan Anuradha
  *         Rajashekar
  *
  */
@@ -200,6 +200,12 @@ public class TwitterHelper {
 		}
 		return twitterResponseList;
 	}
+	
+	/**
+	 * Implementing Twitter API to get the location from where twitter has trending topics*
+	 * @return Returns the locations that Twitter has trending topic information for.
+	 * @author Anuradha Rajashekar
+	 */
 
 	public List<String> trendsAvailable() {
 		List<String> twitterResponseList = new ArrayList<String>();
@@ -223,7 +229,12 @@ public class TwitterHelper {
 		}
 		return twitterResponseList;
 	}
-
+	/**
+	 * Implementing twitter API to display all languages that twitter supports
+	 * 
+	 * @return List of languages supported by Twitter
+	 * @author Ashwini Shankar Narayan
+	 */
 	public List<String> languageSupport() {
 		List<String> twitterResponseList = new ArrayList<String>();
 		try {
@@ -278,6 +289,11 @@ public class TwitterHelper {
 		return twitterResponseList;
 
 	}
+	/**
+	 * Implementing Twitter API to get the location nearest to user from where twitter has trending topics*
+	 * @return Returns the locations that Twitter has trending topic information for, closest to a specified location.
+	 * @author Anuradha Rajashekar
+	 */
 
 	public List<String> trendsClosest() {
 		List<String> twitterResponseList = new ArrayList<String>();
@@ -300,6 +316,14 @@ public class TwitterHelper {
 		}
 		return twitterResponseList;
 	}
+	
+	/**
+	 * Implementing Twitter API to get the list of followers for the user.
+	 * 
+	 * @param seachstring
+	 * @return Returns a cursored collection of user objects for users following the specified user.
+	 * @author Anuradha Rajashekar
+	 */
 
 	public List<String> followersList(String searchStr) {
 		List<String> twitterResponseList = new ArrayList<String>();
